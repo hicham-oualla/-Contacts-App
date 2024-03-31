@@ -36,3 +36,19 @@ function boucler(){
 }
 
 boucler();
+function searchContact() {
+    const searchValue = document.getElementById('searchInput').value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+        const cardName = card.querySelector('.card-title').innerText.toLowerCase();
+        if (cardName.includes(searchValue)) {
+            card.classList.remove('d-none'); // Show the card
+        } else {
+            card.classList.add('d-none'); // Hide the card
+        }
+    });
+}
+
+
+
