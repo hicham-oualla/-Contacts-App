@@ -53,6 +53,9 @@
             overflow: hidden;
         }
      
+        .d-none {
+            display: none !important;
+        }
     </style>
 </head>
 <body>
@@ -72,22 +75,20 @@
     <div class="row mt-3">
         <div class="col-md-6 offset-md-3">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Rechercher des contacts par nom, numéro de téléphone ou e-mail">
-                <button class="btn btn-primary" type="button">Ajouter</button>
+                <input type="text" class="form-control" id="searchInput" oninput="searchContact()" placeholder="Rechercher des contacts par nom, numéro de téléphone ou e-mail">
             </div>
         </div>
     </div>
     
     <!-- Cartes de contact -->
-    <div class=" cartes row mt-3">
-        <!-- Carte 1 -->
-    
-      
+    <div class="cartes row mt-3">
+        <!-- Cards will be dynamically generated here -->
+    </div>
 </div>
 
 <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm"></script>
-    <!-- js -->
-    <script src="/javas.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Your custom JavaScript -->
+<script src="javas.js"></script>
 </body>
 </html>
